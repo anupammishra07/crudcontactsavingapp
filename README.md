@@ -1,11 +1,14 @@
 <h1 align="center">
-🌐 crudcontactsavingapp
+ Contact Saving App
 </h1>
 
 
 this project is a crud application with pagination. 
+
 the project is build in MERN stack.
+
 MERN stack is the idea of using Javascript/Node for fullstack web development.
+
 crud opertaion is performed on the user contact information.
 
 
