@@ -41,10 +41,10 @@ notice, you need client and server runs concurrently in different terminal sessi
 $ cd client          // go to client folder
 $ yarn # or npm i    // npm install packages
 $ npm start       // run it locally
+```
 
 
-
-## Server-side usage(PORT: 8000)
+## Client-side usage(PORT: 3000)
 
 ### Start
 
