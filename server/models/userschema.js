@@ -1,4 +1,5 @@
 const mongoose =require("mongoose");
+const validator= require("validator");
 const userschema= new mongoose.Schema({
 
     name:{
@@ -8,24 +9,24 @@ const userschema= new mongoose.Schema({
     },
     email:{
         type: String,
-        required : [true , 'please provide name'],
-        
+        required : [true , 'please provide email'],
+        validate : [validator.isEmail , 'please enter email in correct format'],
         unique: true
     },
     company:{
         type: String,
         required : [true , 'please provide company name'],
-        maxlength : [40, 'Name should be under 40 characters']
+        maxlength : [20, 'Name should be under 20 characters']
     },
 
     title:{
         type: String,
         required : [true , 'please provide title'],
-        maxlength : [40, 'Title should be under 10 characters']
+        maxlength : [20, 'Title should be under 20 characters']
     },
     
     phoneno :{
-        type: String,
+        type: Number,
         required : [true , 'please provide phone no'],
         maxlength : [10, 'Name should be under 10 characters']
     },

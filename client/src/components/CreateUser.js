@@ -1,6 +1,7 @@
 import React from 'react'
 import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
+import "../App.css"
 import { useState } from 'react'
 export default function CreateUser() {
   const [name , setName]=useState('')
@@ -8,6 +9,7 @@ export default function CreateUser() {
   const [company , setCompany]=useState('')
   const [title , setTitle]=useState('')
   const [phoneno, setPhone]=useState('')
+  
 
   const saveuser= async()=>{
     try {
@@ -21,6 +23,7 @@ export default function CreateUser() {
       result.json().then((resp)=>{
         console.log(resp)
       })
+      
     })
     window.alert("user registered");
       
@@ -29,7 +32,7 @@ export default function CreateUser() {
     }
   }
   return (
-    <div  className="mb-3">
+    <div  className="createform">
 
 <Form onSubmit={saveuser}>
         

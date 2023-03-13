@@ -1,11 +1,19 @@
 const User = require("../models/userschema");
 
   exports.create= async(req,res,next)=>{
-   
-   await User.create(req.body)
+
+    const {name , title , company ,email , phoneno} = req.body;
+
+   if(!name || !email || !title ||!company || !phoneno){
+    return res.status(400).json({
+        success: false,
+        greetings: " all fields are required",
+      });
+   }
+   await User.create({name , title , company ,email , phoneno})
     .then((data) => res.json({ message: "user added successfully", data }))
     .catch((err) =>
-        res.status(400).json({ message: "Failed to add todo", error: err.message })
+        res.status(400).json({ message: "Failed to add user", error: err.message })
     );
 
   }
@@ -36,7 +44,15 @@ exports.getusers = async(req, res) => {
 
 
 exports.updateUser = async (req, res) => {
-    await User.findByIdAndUpdate(req.params.id, req.body)
+    const {name , title , company ,email , phoneno} = req.body;
+
+    if(!name || !email || !title ||!company || !phoneno){
+     return res.status(400).json({
+         success: false,
+         greetings: " all fields are required",
+       });
+    }
+    await User.findByIdAndUpdate(req.params.id,{name , title , company ,email , phoneno})
       .then((data) => res.json({ message: "updated successfully", data }))
       .catch((err) =>
           res.status(400).json({ message: "Failed to update user data", error: err.message })

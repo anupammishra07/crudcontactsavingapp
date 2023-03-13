@@ -3,6 +3,7 @@ import Form from 'react-bootstrap/Form'
 import Button from 'react-bootstrap/Button';
 import { useState } from 'react';
 import { useParams } from "react-router-dom";
+import "../App.css"
 export default function UpdateUser() {
   
   const [name , setName]=useState('')
@@ -50,7 +51,7 @@ export default function UpdateUser() {
   
 
   return (
-    <div>
+    <div className='createform'>
        <Form onSubmit={updateUser}>
         
         <Form.Group controlId="Name">
@@ -79,7 +80,7 @@ export default function UpdateUser() {
           <Form.Control type="text"  value={phoneno}
                 onChange={(e) => setPhone(e.target.value)}/>
         </Form.Group>
-        <Button variant="primary" size="lg" block="block" type="submit" onClick={ updateUser}>
+        <Button  variant="primary" size="lg" block="block" type="submit" onClick={ updateUser}>
           Update User
         </Button>
       </Form>
