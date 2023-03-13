@@ -15,7 +15,7 @@ crud opertaion is performed on the user contact information.
 
 ## clone or download
 ```terminal
-$ git clone https://github.com/amazingandyyy/mern.git
+$ git clone https://github.com/anupammishra07/crudcontactsavingapp.git
 $ yarn # or npm i
 ```
 
