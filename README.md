@@ -44,7 +44,7 @@ $ npm start       // run it locally
 ```
 
 
-## Client-side usage(PORT: 3000)
+## Server-side usage(PORT: 8000)
 
 ### Start
 
